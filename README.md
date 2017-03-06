@@ -22,4 +22,6 @@ run this in a different terminal window!
 npm start
 ```
 
-this should open a browser window and have live-reload of the javascript
+this should open a browser window and have live-reload of the javascript. 
+
+`index.html` will be created automatically, if you want a different custom page, create a pug file in the templates folder, and it will then be available at `/template-name.html`
