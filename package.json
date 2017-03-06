@@ -1,0 +1,27 @@
+{
+  "name": "sass-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug templates -w --out public/",
+    "sass": "node-sass sass/app.scss public/app.css; node-sass sass/app.scss public/app.css -w",
+    "watch": "concurrently --kill-others \"npm run pug\" \"npm run sass\"",
+    "start": "budo index.js --css public/app.css --live -o -- -t [ babelify --presets [ es2015 react ]",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babelify": "^7.3.0",
+    "budo": "^9.4.7",
+    "concurrently": "^3.4.0",
+    "node-sass": "^4.5.0",
+    "pug": "^2.0.0-beta11"
+  },
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
