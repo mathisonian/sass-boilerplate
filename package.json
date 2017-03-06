@@ -7,7 +7,7 @@
     "pug": "pug templates -w --out public/",
     "sass": "node-sass sass/app.scss public/app.css; node-sass sass/app.scss public/app.css -w",
     "watch": "concurrently --kill-others \"npm run pug\" \"npm run sass\"",
-    "start": "budo index.js --css public/app.css --live -o -- -t [ babelify --presets [ es2015 react ]",
+    "start": "budo index.js --dir public/ --css public/app.css --live -o -- -t [ babelify --presets [ es2015 react ]",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
